@@ -1310,6 +1310,7 @@ var x = 1;
 - 所有类
 ```
 /javascript
+/*
  * @func
  * @desc 一个带参数的函数
  * @param {string} a - 参数a
