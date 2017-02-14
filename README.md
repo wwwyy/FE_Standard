@@ -89,7 +89,7 @@
 - 不要在自动闭合标签结尾处使用斜线（HTML5 规范 指出他们是可选的）；
 - 不要忽略可选的关闭标签，例：`</li>` 和 `</body>`
 
- ```
+ ```html
  <!DOCTYPE html>
 <html>
     <head>
@@ -106,7 +106,7 @@
 在页面开头使用这个简单地doctype来启用标准模式，使其在每个浏览器中尽可能一致的展现；
 
 虽然doctype不区分大小写，但是按照惯例，doctype大写
-```
+```html
 <!DOCTYPE html>
 <html>
 	...
@@ -119,7 +119,7 @@
 
 在sitepoint上可以查到语言列表；
 但sitepoint只是给出了语言的大类，例如中文只给出了zh，但是没有区分香港，台湾，大陆。而微软给出了一份更加详细的语言列表，其中细分了zh-cn, zh-hk, zh-tw。
-```
+```html
 <!DOCTYPE html>
 <html lang="en-us">
     ...
@@ -127,7 +127,7 @@
 ```
 <h4 id="字符编码">字符编码</h4>
 通过声明一个明确的字符编码，让浏览器轻松、快速的确定适合网页内容的渲染方式，通常指定为'UTF-8'。
-```
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -140,7 +140,7 @@
 用 `<meta>` 标签可以指定页面应该用什么版本的IE来渲染；
 
 不同doctype在不同浏览器下会触发不同的渲染模式
-```
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -157,7 +157,7 @@
 - 使用link
 - 使用style
 - 使用script
-```
+```html
 `<!-- External CSS -->
 <link rel="stylesheet" href="code_guide.css">
 
@@ -188,7 +188,7 @@
 - `class`是为高可复用组件设计的，所以应处在第一位；
 
 - `id`更加具体且应该尽量少使用，所以将它放在第二位。
-```
+```html
 <a class="..." id="..." data-modal="toggle" href="#">Example link</a>
 
 <input class="form-control" type="text">
@@ -198,7 +198,7 @@
 <h4 id="boolean属性">boolean属性</h4>
 boolean属性指不需要声明取值的属性，XHTML需要每个属性声明取值，但是HTML5并不需要；
 <i>boolean属性的存在表示取值为true，不存在则表示取值为false。</i>
-```
+```html
 <input type="text" disabled>
 
 <input type="checkbox" value="1" checked>
@@ -213,7 +213,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 在编写HTML代码时，需要尽量避免多余的父节点；
 
 很多时候，需要通过迭代和重构来使HTML变得更少。
-```
+```html
 <!-- Not well -->
 <span class="avatar">
     <img src="...">
@@ -230,7 +230,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 <h2 id="CSSSCSS">CSS, SCSS</h2>
 <h4 id="缩进">缩进</h4>
 使用soft tab（4个空格）。
-```
+```css
 .element {
     position: absolute;
     top: 10px;
@@ -240,10 +240,10 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
     width: 50px;
     height: 50px;
 }
-```
+```css
 <h4 id="分号">分号</h4>
 每个属性声明末尾都要加分号。
-```
+```css
 .element {
     width: 20px;
     height: 20px;
@@ -269,7 +269,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 - `@else` 前后
 - 属性值中的','后
 - 注释'/*'后和'*/'前
-```
+```css
 /* not good */
 .element {
     color :red! important;
@@ -334,7 +334,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 - 文件最后保留一个空行
 - '}'后最好跟一个空行，包括scss中嵌套的规则
 - 属性之间需要适当的空行，具体见[属性声明顺序](#属性声明顺序)
-```
+```css
 /* not good */
 .element {
     ...
@@ -369,7 +369,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 - '{'后和'}'前
 - 每个属性独占一行
 - 多个规则的分隔符','后
-```
+```css
 /* not good */
 .element
 {color: red; background-color: black;}
@@ -397,7 +397,7 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 缩进与下一行代码保持一致；
 
 可位于一个代码行的末尾，与代码间隔一个空格。
-```
+```CSS
 /* Modal header */
 .modal-header {
     ...
@@ -437,7 +437,7 @@ li[data-type="single"] {
 - 类名使用小写字母，以中划线分隔
 - id采用驼峰式命名
 - scss中的变量、函数、混合、placeholder采用驼峰式命名
-```
+```css
 /* class */
 .element-content {
     ...
@@ -468,7 +468,7 @@ $colorBlack: #000;
 ```
 <h4 id="属性声明顺序">属性声明顺序</h4>
 相关的属性声明按右边的顺序做分组处理，组之间需要有一个空行。
-```
+```css
 .declaration-order {
     display: block;
     float: right;
@@ -805,7 +805,7 @@ $colorBlack: #000;
 颜色16进制用小写字母；
 
 颜色16进制尽量用简写。
-```
+```css
 /* not good */
 .element {
     color: #ABCDEF;
@@ -829,7 +829,7 @@ $colorBlack: #000;
 - background
 - transition
 - animation
-```
+```css
 /* not good */
 .element {
     transition: opacity 1s linear 2s;
@@ -845,7 +845,7 @@ $colorBlack: #000;
 ```
 <h4 id="媒体查询">媒体查询</h4>
 尽量将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，或者丢在文档的最底部，这样做只会让大家以后更容易忘记他们。
-```
+```css
 .element {
     ...
 }
@@ -881,7 +881,7 @@ $colorBlack: #000;
 `@extend` 中使用placeholder选择器；
 
 去掉不必要的父级引用符号'&'。
-```
+```css
 /* not good */
 @import "_dialog.scss";
 
@@ -938,7 +938,7 @@ $colorBlack: #000;
 发布的代码中不要有 `@import`；
 
 尽量少用'*'选择器。
-```
+```css
 /* not good */
 .element {
 }
@@ -1021,7 +1021,7 @@ li {
 <h2 id="JavaScript">JavaScript</h2>
 <h4 id="缩进">缩进</h4>
 使用soft tab（4个空格）。
-```
+```javascript
 var x = 1,
     y = 1;
 
@@ -1043,7 +1043,7 @@ if (x < y) {
 - break
 - continue
 - do-while
-```
+```javascript
 /* var declaration */
 var x = 1;
 
@@ -1079,7 +1079,7 @@ do {
 - for循环，分号后留有一个空格，前置条件如果有多个，逗号后留一个空格
 - 无论是函数声明还是函数表达式，'{'前一定要有空格
 - 函数的参数之间
-```
+```javascript
 // not good
 var a = {
     b :1
@@ -1137,7 +1137,7 @@ for (i = 0; i < 6; i++) {
 - 注释前（当注释在代码块的第一行时，则无需空行）
 - 代码块后（在函数调用、数组、对象中则无需空行）
 - 文件最后保留一个空行
-```
+```javascript
 // need blank line after variable declaration
 var x = 1;
 
@@ -1213,7 +1213,7 @@ var foo = {
 
 - 代码块'{'后和'}'前
 - 变量赋值后
-```
+``` javascript
 // not good
 var a = {
     b: 1
@@ -1274,7 +1274,7 @@ var a,
 缩进与下一行代码保持一致；
 
 可位于一个代码行的末尾，与代码间隔一个空格。
-```
+```javascript
 if (condition) {
     // if you made it here, then all security checks passed
     allowed();
@@ -1292,7 +1292,7 @@ var zhangsan = 'zhangsan'; // one space after code
 - 浏览器特殊的HACK代码
 - 业务逻辑强相关的代码
 ```
-/*
+/javascript
  * one space after '*'
  */
 var x = 1;
@@ -1306,7 +1306,7 @@ var x = 1;
 - 所有函数
 - 所有类
 ```
-/**
+/javascript**
  * @func
  * @desc 一个带参数的函数
  * @param {string} a - 参数a
@@ -1326,7 +1326,7 @@ function foo(a, b, c, d, g, j) {
 ```
 <h4 id="引号">引号</h4>
 最外层统一使用单引号。
-```
+```javascript
 // not good
 var x = "test";
 
@@ -1343,7 +1343,7 @@ var y = 'foo',
 - 常量全大写，用下划线连接
 - 构造函数，大写第一个字母
 - jquery对象必须以'$'开头命名
-```
+```javascript
 var thisIsMyName;
 
 var goodID;
@@ -1368,7 +1368,7 @@ var $body = $('body');
 ```
 <h4 id="变量声明">变量声明</h4>
 一个函数作用域中所有的变量声明尽量提到函数首部，用一个var声明，不允许出现两个连续的var声明。
-```
+```javascript
 function doSomethingWithItems(items) {
     // use one var
     var value = 10,
@@ -1391,7 +1391,7 @@ function doSomethingWithItems(items) {
 不要给inline function命名；
 
 参数之间用', '分隔，注意逗号后有一个空格。
-```
+```javascript
 // no space before '(', but one space before'{'
 var doSomething = function(item) {
     // do something
@@ -1443,7 +1443,7 @@ var doSomething = function(a, b, c) {
 对象以缩进的形式书写，不要写在一行；
 
 数组、对象最后不要有逗号。
-```
+```javascript
 // not good
 var a = {
     'b': 1
@@ -1464,7 +1464,7 @@ var a = {
 ```
 <h4 id="括号">括号</h4>
 下列关键字后必须有大括号（即使代码块的内容只有一行）：`if`, `else`, `for`, `while`, `do`, `switch`, `try`, `catch`, `finally`, `with`。
-```
+```javascript
 // not good
 if (condition)
     doSomething();
@@ -1486,7 +1486,7 @@ if (condition) {
 
 - 不要用null来判断函数调用时有无传参
 - 不要与未初始化的变量做比较
-```
+```javascript
 // not good
 function test(a, b) {
     if (b === null) {
@@ -1512,7 +1512,7 @@ if (a === null) {
 永远不要直接使用undefined进行变量判断；
 
 使用typeof和字符串'undefined'对变量进行判断。
-```
+```javascript
 // not good
 if (person === undefined) {
     ...
@@ -1553,7 +1553,7 @@ debugger不要出现在提交的代码里；
 不要在循环内部声明函数；
 
 不要像这样使用构造函数，例：`new function () { ... }, new Object`；
-```
+```javascript
 // not good
 if (a == 1) {
     a++;
@@ -1653,7 +1653,7 @@ var singleton = new function() {
 switch的falling through和no default的情况一定要有注释特别说明；
 
 不允许有空的代码块。
-```
+```javascript
 // not good
 var a   = 1;
 
