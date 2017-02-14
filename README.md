@@ -103,6 +103,7 @@
     </body>
 </html>
  ```
+ 
 <h4 id="HTML5doctype">HTML5 doctype</h4>
 在页面开头使用这个简单地doctype来启用标准模式，使其在每个浏览器中尽可能一致的展现；
 
@@ -1308,7 +1309,7 @@ var x = 1;
 - 所有函数
 - 所有类
 ```
-/javascript**
+/javascript
  * @func
  * @desc 一个带参数的函数
  * @param {string} a - 参数a
