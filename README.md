@@ -1308,8 +1308,7 @@ var x = 1;
 - 所有常量
 - 所有函数
 - 所有类
-```
-/javascript
+```javascript
 /*
  * @func
  * @desc 一个带参数的函数
